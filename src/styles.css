@@ -1,38 +1,136 @@
-* {
-  font-family: Arial, Helvetica, sans-serif;
+/* General Reset */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html, body {
-  margin: 0;
-  border: 0;
-  padding: 0;
-  background-color: #fff;
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
+    color: #333;
 }
 
-main {
-  margin: auto;
-  width: 50%;
-  padding: 20px;
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+header .logo h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+header nav ul li {
+    margin: 0 15px;
+}
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
 }
 
-main > h1 {
-  text-align: center;
-  font-size: 3.5em;
+/* Hero Section */
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
 }
 
-.box {
-  display:inline-block;
-  width:100%;
-  text-align:center;
+/* Sections */
+section {
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 1000px;
 }
-img {
-  display:inline-block;
-  width:768px;
-  margin:0 auto;
+.unit-gallery {
+    display: flex;
+    justify-content: space-around;
+}
+.unit {
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
-@media only screen and (max-width: 767px) {
-    img {
-        width:100%;
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+form input, form textarea, form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* General Styles for Property Gallery */
+#property-gallery {
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+#property-gallery h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+}
+
+/* Gallery Styling */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Image Styles */
+.gallery img {
+    width: 100%;
+    max-width: 300px; /* Limit max width for large screens */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    #property-gallery h2 {
+        font-size: 20px;
+    }
+
+    .gallery img {
+        max-width: 90%; /* Reduce size for smaller screens */
+    }
+
+    .gallery {
+        flex-direction: column; /* Stack images vertically */
+        align-items: center;
     }
 }
